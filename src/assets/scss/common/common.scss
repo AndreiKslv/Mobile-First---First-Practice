@@ -1,0 +1,148 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto-Regular', Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.125rem;
+	color: $color-015;
+}
+
+body.lock {
+	overflow-y: hidden;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100%;
+}
+
+.container {
+	padding: 0 15px;
+}
+
+@include desktop {
+	.container {
+		max-width: 1230px;
+		margin: 0 auto;
+	}
+}
+
+@include desktop-hd {
+	.container--large {
+		max-width: 1440px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+}
+
+.container--flex {
+	flex-grow: 1;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.button-link {
+	@extend %button-link;
+}
+
+.button-link--light {
+	background: $color-003;
+	color: $color-001;
+}
+
+.button-link--dark {
+	background: $color-001;
+	color: $color-003;
+}
+
+.title {
+	position: relative;
+	
+	text-align: center;
+	font-family: 'RobotoCondensed-Regular';
+	font-weight: 400;
+	@include adaptive-value('font-size', 48, 24, 2, 320, 639);
+	line-height: 1.16;
+	letter-spacing: .125rem;
+}
+
+@include portrait {
+	.title {
+		font-size: 3rem;
+
+		&::after {
+			width: 100px;
+		}
+	}
+}
+
+.title--one {
+	color: $color-001;
+}
+
+.title--two {
+	color: $color-000;
+}
+
+.title--three {
+	color: $color-004;
+}
+
+// SLICK-SLIDER 
+
+.slick-track {
+	display: flex;
+	flex-grow: 1;
+}
+
+.slick-list {
+	display: flex;
+	flex-grow: 1;
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+
+	display: flex;
+}
+
+.slick-dots li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.slick-dots button {
+	width: 10px;
+	height: 10px;
+	border: 1px solid $color-001;
+
+	border-radius: 50%;
+	background: $color-000;
+
+	font-size: 0;
+}
+
+.slick-active button {
+	background: $color-001;
+}
+
+.quote .slick-dots {
+	bottom: 80px;
+}
+
+@include desktop {
+	.quote {
+		.slick-dots {
+			bottom: 120px;
+		}
+	}
+}

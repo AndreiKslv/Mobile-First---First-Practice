@@ -1,0 +1,42 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 5px;
+
+	&__list {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		transform: translateY(-128%);
+		z-index: 2;
+		transition: all 1s ease;
+
+		min-height: 100vh;
+
+		background: $color-003;
+
+		font-family: 'RobotoCondensed-Regular';
+		font-weight: 700;
+		font-size: 1.7rem;
+		line-height: 1.3125rem;
+		letter-spacing: .125rem;
+		color: $color-004;
+	}
+
+	&__list.nav__list--active {
+		transform: translateY(0);
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	&__link {
+		display: block;
+		text-align: center;
+		padding: 1.125rem .625rem;
+	}
+}

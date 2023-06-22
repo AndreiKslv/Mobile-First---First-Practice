@@ -1,0 +1,41 @@
+.quote {
+	padding: 0 7.5px;
+
+    &__slider-item {
+		text-align: center;
+	}
+
+    &__slider-item-img {
+		margin: 60px auto 40px;
+	}
+
+    &__block {
+		max-width: 500px;
+		margin: 0 auto 135px;
+	}
+
+    &__text {
+		margin-bottom: 20px;
+
+		font-family: 'RobotoCondensed-Regular';
+		font-weight: 400;
+		font-size: 1.2rem;
+		line-height: 1.625rem;
+		color: $color-004;
+	}
+
+	&__company {
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		color: $color-001;
+	}
+
+    &__author {
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		font-size: 1.25rem;
+		line-height: 1.4375rem;
+		letter-spacing: .125rem;
+		color: $color-004;
+	}
+}

@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'RobotoCondensed-Regular';
+	src: url('./../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'RobotoCondensed-Bold';
+	src: url('./../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('./../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+		 url('./../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+		 url('./../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('./../fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+		 url('./../fonts/Roboto/Roboto-Medium.woff') format('woff'),
+		 url('./../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'BloggerSans';
+	src: url('./../fonts/Blogger_Sans/Blogger_sans.woff2') format('woff2'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans.woff') format('woff'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans.otf') format('opentype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'BloggerSans-Bold';
+	src: url('./../fonts/Blogger_Sans/Blogger_sans-Bold.woff2') format('woff2'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans-Bold.woff') format('woff'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans-Bold.otf') format('opentype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'BloggerSans-Light';
+	src: url('./../fonts/Blogger_Sans/Blogger_sans-Light.woff2') format('woff2'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans-Light.woff') format('woff'),
+		 url('./../fonts/Blogger_Sans/Blogger_sans-Light.otf') format('opentype');
+	font-style: normal;
+	font-weight: 300;
+}
+
+

@@ -1,0 +1,52 @@
+@include portrait {
+	.service {
+		&__subtitle {
+			font-size: 1.5rem;
+		}
+
+		&__text {
+			font-size: 1.125rem;
+			line-height: 1.33;
+		}
+	}
+}
+
+@include tablet-portrait {
+	.service {
+		&__cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(230px, 244px));
+			justify-content: center;
+		}
+
+		&__title {
+			margin-top: 15px;
+		}
+	}
+}
+
+@include desktop-hd {
+	.service {
+		&__inner {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		&__text-block {
+			align-items: flex-start;
+
+			max-width: 393px;
+
+			text-align: left;
+		}
+
+		&__cards {
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
+
+		&__title {
+			margin-bottom: 65px;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+.project {
+	padding: 20px 5px 40px;
+	background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+
+    &__title {
+		margin-bottom: 70px;
+
+		&:after {
+			@extend %title-underline;
+			background: $color-000;
+		}
+	}
+
+    &__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 360px));
+		justify-content: center;
+		gap: 50px 25px;
+	}
+
+	&__card {
+		text-align: center;
+	}
+
+    &__card-img-block {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		margin-bottom: 20px;
+	}
+
+    &__card-img {
+		border-radius: 4px;
+	}
+
+    &__card-info-block {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		bottom: 5%;
+		left: 5%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		
+		border-radius: 4px;
+		background: #F9F6E5;
+
+		opacity: 0;
+		pointer-events: none;
+		transition: all .3s ease;
+	}
+
+	&__card:hover &__card-info-block {
+		opacity: 0.83;
+		pointer-events: unset;
+	}
+
+    &__card-info-search {
+		margin-top: 4px;
+	}
+
+    &__card-name {
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.18;
+		letter-spacing: .125rem;
+		color: $color-001;
+	}
+}

@@ -1,0 +1,34 @@
+@include portrait {
+	.project {
+		&__card-name {
+			font-size: 1.25rem;
+			line-height: 1.4375rem;
+		}
+	}
+}
+
+@include tablet-portrait {
+	.project {
+		margin-bottom: 80px;
+		
+		&__cards {
+			grid-template-columns: repeat(auto-fill, minmax(280px, 317px));
+		}
+	}
+}
+
+@include desktop {
+	.project {
+		&__cards {
+			grid-template-columns: repeat(2, minmax(280px, 317px));
+		}
+	}
+}
+
+@include desktop-hd {
+	.project {
+		&__cards {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+} 

@@ -1,0 +1,53 @@
+@include portrait {
+	.quote {
+		&__slider-item-img {
+			margin: 60px auto 90px;
+		}
+
+		&__block {
+			max-width: 510px;
+		}
+
+		&__text {
+			margin-bottom: 40px;
+
+			font-size: 2rem;
+			line-height: 2.125rem;
+		}
+	}
+}
+
+@include tablet-portrait {
+	.quote {
+		&__block {
+			max-width: 580px;
+		}
+	}
+}
+
+@include desktop {
+	.quote {
+		&__block {
+			margin: 0 auto 205px;
+		}
+	}
+}
+
+@include desktop-hd {
+	.quote {
+		&__block {
+			max-width: 750px;
+		}
+
+		&__text {
+			font-size: 2.25rem;
+			line-height: 2.625rem;
+		}
+
+		&__author {
+			font-size: 1.5rem;
+			line-height: 1.75rem;
+		}
+	}
+}
+

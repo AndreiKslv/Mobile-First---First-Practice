@@ -1,0 +1,35 @@
+.menu {
+	position: relative;
+	z-index: 3;
+
+	width: 40px;
+	height: 40px;
+
+	background: $color-000;
+	border-radius: 3px;
+
+    &__line {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		display: block;
+
+		width: 13px;
+		height: 2px;
+
+		background: $color-001;
+	}
+
+	&__line:nth-child(1) {
+		top: 15px;
+	}
+
+	&__line:nth-child(2) {
+		top: 19px;
+	}
+
+	&__line:nth-child(3) {
+		top: 23px;
+	}
+}

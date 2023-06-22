@@ -1,0 +1,149 @@
+.service {
+	padding: 25px 5px 40px;
+
+    &__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+    &__text-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-bottom: 40px;
+
+		text-align: center;
+	}
+
+    &__title {
+		position: relative;
+
+		margin-bottom: 50px;
+
+		&::after {
+			@extend %title-underline;
+			background: $color-001;
+		}
+	}
+
+    &__subtitle {
+		margin-bottom: 20px;
+
+		@include adaptive-value('font-size', 24, 20, 2, 320, 639);
+		line-height: 1.2;
+		color: $color-004;
+	}
+
+    &__text {
+		font-size: .9375rem;
+		line-height: 1.0625rem;
+		color: $color-015;
+	}
+
+    &__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(230px, 250px));
+		justify-content: center;
+	}
+
+    &__card {
+		display: flex;
+
+		border: 1px solid $color-003;
+	}
+
+	&__card:hover &__card-text,
+	&__card:hover &__card-link {
+		display: block;
+		opacity: 1;
+	}
+
+    &__card-content {
+		flex-grow: 1;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		min-height: 283px;
+		margin: 15px;
+
+		text-align: center;
+
+		&:hover {
+			border: 4px solid $color-001;
+		}
+	}
+
+    &__card-img {
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+
+    &__card-name {
+		max-width: 196px;
+		min-height: 40px;
+
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.1875rem;
+		letter-spacing: .125rem;
+		text-transform: uppercase;
+		color: $color-004;
+	}
+
+	&__card-text {
+		display: none;
+
+		max-width: 196px;
+
+		font-family: 'BloggerSans';
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.125rem;
+		color: $color-012;
+
+		opacity: 0;
+
+		transition: opacity .3s ease;
+	}
+
+    &__card-link {	
+		position: relative;
+
+		display: none;
+
+		margin-top: auto;
+		margin-bottom: 20px;
+
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.1875rem;
+		letter-spacing: .125rem;
+		text-transform: uppercase;
+		color: $color-001;
+
+		opacity: 0;
+
+		transition: opacity .3s ease;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			right: -28px;
+			bottom: 0px;
+
+			width: 30px;
+			height: 19px;
+
+			background: url(../images/common/text-arrow.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}

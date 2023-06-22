@@ -1,0 +1,54 @@
+@mixin mobile-portrait {
+	@media (min-width: $portrait) {
+		@content;
+	}
+}
+
+@mixin portrait {
+	@media (min-width: $portrait) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@media (min-width: $tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $desktop) {
+		@content;
+	}
+}
+@mixin desktop-hd {
+	@media (min-width: $desktop-hd) {
+		@content;
+	}
+}
+
+// .....................................................................................
+
+@mixin button-link($width, $height) {
+	@extend button-link;
+	width: $width;
+	height: $height;
+}
+
+// Adaptive properties
+@mixin adaptive-value($property, $startSize, $minSize, $type, $maxWidthContainer, $maxWidth) {
+    $addSize: $startSize - $minSize;
+    @if $type==1 {
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type==2 {
+        #{$property}: $startSize + px;
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$maxWidthContainer + px}) / #{$maxWidth - $maxWidthContainer}));
+        }
+    } @else {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+}

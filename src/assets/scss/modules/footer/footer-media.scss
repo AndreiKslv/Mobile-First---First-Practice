@@ -1,0 +1,107 @@
+@include portrait {
+	.footer {
+		
+		&__top {
+			text-align: left;
+		}
+
+		&__info {
+			grid-template-columns: repeat(2, 200px);
+			gap: 40px;
+		}
+
+		&__text {
+			max-width: 540px;
+			margin: 0 auto 40px;
+
+			font-size: 1.5rem;
+			line-height: 1.625rem;
+		}
+
+		&__messengers {
+			gap: 0;
+
+			margin-bottom: 40px;
+		}
+
+		&__messengers-item {
+			flex-grow: 1;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: 55px;
+			border: 1px solid #7EBF84;
+			border-left: none;
+		}
+
+		&__messengers-item:last-child {
+			border-right: none;
+		}
+
+		&__bottom-inner {
+			padding: 0;
+		}
+
+		&__up-link {
+			padding: 15px 50px 15px 15px;
+		}
+
+		&__up-link:after {
+			bottom: 16px;
+			left: unset;
+			right: 0px;
+		}
+
+		&__bottom-inner {
+			justify-content: flex-end;
+		}
+	}
+}
+
+@include tablet-portrait {
+	.footer {
+		&__main {
+			padding: 114px 5px 40px;
+		}
+
+		&__text {
+			max-width: 690px;
+			margin: 0 0 40px;
+
+			font-size: 2.25rem;
+			line-height: 2rem;
+		}
+		
+		&__messengers {
+			margin-bottom: 70px;
+		}
+	}
+}
+
+@include desktop {
+	.footer {
+		&__main {
+			padding: 160px 5px 40px;
+		}
+
+		&__text {
+			max-width: 750px;
+			margin-bottom: 80px;
+		}
+		
+		&__messengers {
+			margin-bottom: 60px;
+		}
+
+		&__info {
+			grid-template-columns: repeat(4, 1fr);
+			gap: 50px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}

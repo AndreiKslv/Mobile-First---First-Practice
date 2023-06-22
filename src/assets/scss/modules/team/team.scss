@@ -1,0 +1,35 @@
+.team {
+	padding: 20px 0 40px;
+
+    &__inner {
+		display: grid;
+		justify-content: center;
+	}
+
+    &__img {
+		justify-self: center;
+
+		margin-bottom: 40px;
+	}
+
+    &__text-block {
+		margin-bottom: 80px;
+	}
+
+    &__title {
+		margin-bottom: 50px;
+
+		&::after {
+			@extend %title-underline;
+			background: $color-001;
+		}	
+	}
+
+	&__link-button {
+		justify-self: center;
+	}
+
+	&__text {
+		text-align: center;
+	}
+}

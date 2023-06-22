@@ -1,0 +1,132 @@
+.footer {
+	position: relative;
+
+    &__top {
+		background: $color-001;
+
+		text-align: center;
+		font-family: 'Roboto-Regular';
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.25rem;
+		color: $color-000;
+	}
+
+    &__main {
+		padding: 85px 5px 40px;
+	}
+
+    &__logo-block {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 230px;
+		height: 60px;
+
+		border-radius: 3px;
+		background: $color-001;
+	}
+
+    &__text {
+		margin-bottom: 70px;
+
+		font-size: 1.25rem;
+		line-height: 1.375rem;
+		letter-spacing: .125rem;
+	}
+
+    &__messengers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		margin-bottom: 70px;
+		
+	}
+
+    &__messengers-link {
+		padding: 10px;
+	}
+
+    &__info {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		gap: 40px 0;
+
+		padding-bottom: 20px;
+	}
+
+    &__title {
+		margin-bottom: 15px;
+
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 700;
+		font-size: 1.125rem;
+		line-height: 1.3125rem;
+		letter-spacing: .125rem;
+		color: $color-003;
+	}
+
+    &__list-item:not(:last-child),
+	&__address-link:not(:last-child) {
+		margin-bottom: 5px;
+	}
+
+    &__address {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__bottom {
+		background: $color-003;
+	}
+
+	&__bottom-inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 50px 0;
+	}
+
+    &__up {
+		display: flex;
+	}
+
+    &__up-link {
+		position: relative;
+
+		padding: 20px 20px 40px;
+
+		font-family: 'RobotoCondensed-Regular';
+		font-weight: 400;
+		line-height: 1.1875rem;
+		letter-spacing: .125rem;
+		color: $color-004;
+	}
+
+	&__up-link::after {
+		content: '';
+
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 22px;
+		height: 15px;
+
+		background: url(./../images/common/up.svg);
+		background-repeat: no-repeat;
+	}
+}
+
+
